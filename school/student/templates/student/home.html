@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1 class="display-5"> Meta School </h1>
+<div class="btn btn-primary">
+    <a class="text-white text-decoration-none" href="{%url 'addStudent'%}"> Register a Student (Django form) </a>
+</div>
+<br> <br>
+<div class="btn btn-secondary">
+    <a class="text-white text-decoration-none" href="{%url 'addform2'%}"> Register a Student (html form)</a>
+</div>
+
+
+{% endblock%}

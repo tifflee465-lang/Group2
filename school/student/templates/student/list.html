@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+{% block content %}   
+    <h1 class="display-4 ms-2"> This is my List of student</h1>
+
+    <table border="1" class="table">
+        <thead>
+            <th>student Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Action</th>
+        </thead>
+        {% for s in Student%}
+        <tr>
+            <td>{{s.name}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.yearOfstudy}}</td>
+            <td>{{s.course}}</td>
+            <td>
+                <a class="btn btn-primary" href="{% url 'edit' s.id %}">edit</a>
+                <a class="btn btn-primary" href="{% url 'delete' s.id %}">delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{%endblock%}

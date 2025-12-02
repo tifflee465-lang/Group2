@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block content %}   
+    <form method="POST">
+        <Fieldset >
+            {%csrf_token%}
+            <p>This is Adding data to tables using Html Forms </p>
+            <input type="text" name="name" placeholder="Your Name" required> <br><br>
+            <input type="number" name="age" placeholder="Your Age" required> <br><br>
+            <input type="text" name="grade" placeholder="Your Grade" required><br><br>
+            <input type="text" name="course" placeholder="course of study" required><br><br>
+            <input type="number" name="yearOfstudy" required><br><br>
+            <input type="submit">
+            
+        </Fieldset>
+    </form>
+
+<br>
+<hr>
+     <button> 
+        <a href="{% url 'listviews'%}">Show Table</a>
+    </button>
+{% endblock %}

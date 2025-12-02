@@ -1,0 +1,13 @@
+{%extends 'main.html' %}
+
+{%block content %}
+<form action="" method="POST">
+    {%csrf_token%}
+    <input type="text" name="name" value="{{Student.name}}"><br><br>
+    <input type="age" name="age" value="{{Student.age}}"><br><br>
+    <input type="number" name="yearOfstudy" value="{{Student.yearOfstudy}}"><br><br>
+    <input type="text" name="course" value="{{Student.course}}"><br><br>
+
+    <input type="button" value="submit">
+</form>
+{% endblock %}
